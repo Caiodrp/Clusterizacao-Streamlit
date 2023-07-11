@@ -1,43 +1,57 @@
 # PREVISÃO DE RENDA
-## Estudo CRISP e criação de um modelo de ML para a previsão de renda utilizando regressão
+## Estudo CRISP e criação de Modelos de ML não supervisionados
 
 
-Essa aplicação utiliza análise de dados e tecnicas de Regressão e Machine Learning, para automatizar análises e prever a renda do usuário baseado nas informações e características pessoais.
+Essa aplicação utiliza análise de dados e tecnicas clusterização e segmentação
 
 Tutorial em vídeo de como usar a aplicação:
 
 
-https://user-images.githubusercontent.com/99834159/233712005-fc24be82-7900-4ccb-a570-986c39c6eb06.mov
+https://github.com/Caiodrp/Clusterizacao-Streamlit/assets/99834159/e3ffaf79-0391-46a6-8518-5576dac0d209
 
-# INSTRUÇÕES
-
-## DICIONÁRIO DE DADOS:
-
-![Dicionário de Dados](https://user-images.githubusercontent.com/99834159/233712338-e29a7952-c967-4413-b3d6-da1a9204a3c0.png)
+# Este é um tutorial em vídeo sobre como usar a aplicação
 
 
-# Análises
 
-Na página "Análises", você pode visualizar diferentes gráficos e informações sobre o seu conjunto de dados. 
+https://github.com/Caiodrp/Clusterizacao-Streamlit/assets/99834159/bf830267-6415-4ba6-bf8c-7d7c250a18b4
 
-### Data Frame
 
-A primeira opção de gráficos disponíveis é a "Data Frame", que exibe as primeiras linhas do seu conjunto de dados. Você pode escolher o número de linhas a serem exibidas com o slider na barra lateral.
 
-### Matriz de Correlação
+# Modelos dos arquivos CSV
+## Arquivo CSV clusterização
+[Download Arquivo Online purchased](https://raw.githubusercontent.com/Caiodrp/Clusterizacao-Streamlit/main/CSV/online_shoppers_intention.csv)
 
-A segunda opção de gráficos é a "Matriz de Correlação", que exibe a relação entre todas as variáveis do seu conjunto de dados. 
+## Arquivo CSV RFV
+[Download Arquivo RFV](https://raw.githubusercontent.com/Caiodrp/Clusterizacao-Streamlit/main/CSV/exemplo_RFV.csv)
 
-### Renda ao longo do tempo
+# Análise Clusterização
 
-A terceira opção de gráficos é a "Renda ao longo do tempo", que exibe a média da renda ao longo do tempo para diferentes variáveis. Você pode escolher as variáveis a serem exibidas na barra lateral.
+Na página "Análise Clusterização", após carregar o arquivo .CSV, você pode visualizar diferentes gráficos e informações sobre o conjunto de dados "online_shoppers_intention" que representa o comportamento de diversos acessos de usuários em diferentes tipos de sites, disponível em [https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset). 
 
-### Renda x Variáveis
+**Info**
 
-A quarta opção de gráficos disponíveis é a "Renda x Variáveis", que exibe a relação entre a renda e outras variáveis. Você pode escolher o tipo de variáveis a serem exibidas na barra lateral.
+Na opção "Info", você encontrará informações sobre os dados, como o dicionário de dados, algumas linhas do dataframe e a opção de gerar um relatório completo sobre eles.
 
-# Prever Renda
+**Descritiva**
 
-Na página "Prever Renda", você pode fazer previsões de renda para novos dados. Para isso, você precisa preencher os campos na barra lateral ou carregar um arquivo CSV com novos dados(no modelo do arquivo de exemplo a cima), e clicar em "Prever Renda".  
+Na opção "Descritiva", você encontrará opções de visualizações gráficas entre as variáveis da base de dados e relações entre elas e o problema em questão.
 
-__*As variáveis de tempo(idade e tempo de emprego), devem ser preenchidas em anos.__
+## Clusterização
+
+Após carregar o arquivo, essa página possibilita a realização da clusterização do comportamento de navegação dos acessos, utilizando o algoritmo de K-means ou algoritmos hierárquicos. É oferecido um filtro por variáveis para visualizar os grupos formados.
+
+**K-Means**
+
+Selecionando o "K-means", aparecerá a opção de visualizar, através do método do cotovelo ou da silhueta, sugestões de quantidades de grupos. Em seguida, você poderá definir quantos grupos deseja que o algoritmo divida. Será exibido um filtro para ver a distribuição das variáveis por grupo e a opção de baixar o Data Frame com a coluna de grupamento.
+
+**Hierárquicos**
+
+Selecionando "Hierárquicos", você poderá escolher o método de ligação de acordo com o estudo dos dados. Em seguida, digite a quantidade de clusters desejados (levando em consideração o poder computacional disponível). Será exibido um filtro e um botão de download semelhante ao do K-means.
+
+# Análise Segmentação
+
+Na página "Análise Segmentação", após carregar o arquivo .CSV, você pode visualizar diferentes gráficos e informações sobre o conjunto de dados "exemplo_RFV" que representa o comportamento de clientes em relação a compras, como tempo, quantidade e valor. Disponível em [https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset). 
+
+# Segmentação
+
+Após o carregamento do arquivo, será exibido um dataframe com cada cliente segmentado por Recência, Frequência e Valor em "A", "B", "C" e "D", sendo "A" o melhor nível e "D" o pior (conforme mostrado no notebook de dados). Também será exibido um botão para download do Data Frame segmentado.

@@ -4,11 +4,6 @@
 
 Essa aplicação utiliza análise de dados e tecnicas clusterização e segmentação
 
-Tutorial em vídeo de como usar a aplicação:
-
-
-https://github.com/Caiodrp/Clusterizacao-Streamlit/assets/99834159/e3ffaf79-0391-46a6-8518-5576dac0d209
-
 # Este é um tutorial em vídeo sobre como usar a aplicação
 
 

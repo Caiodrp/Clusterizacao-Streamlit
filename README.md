@@ -1,4 +1,4 @@
-# PREVISÃO DE RENDA
+# CLUSTERIZAÇÃO E SEGMENTAÇÃO
 ## Estudo CRISP e criação de Modelos de ML não supervisionados
 
 

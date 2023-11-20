@@ -8,4 +8,3 @@ Requests==2.31.0
 scikit_learn==1.0.2
 seaborn==0.12.2
 streamlit==1.23.1
-ydata_profiling==4.3.1

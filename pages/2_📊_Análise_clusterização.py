@@ -2,10 +2,11 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-import ydata_profiling as pp
 import streamlit.components.v1 as components
 import plotly.express as px
 import base64
+
+from ydata_profiling import ProfileReport
 
 @st.cache_data
 def carregar_dados(uploaded_file):
@@ -191,7 +192,7 @@ def main():  # sourcery skip: avoid-builtin-shadow
             # Adicionar botão para gerar relatório HTML
             if st.button("Gerar relatório"):
                 # Gerar relatório HTML usando o ydata-profiling
-                profile = pp.ProfileReport(df)
+                profile = ProfileReport(df)
                 html = profile.to_html()
 
                 # Exibir relatório HTML na página do Streamlit

@@ -1,7 +1,8 @@
 import pandas as pd
 import streamlit as st
 import base64
-import pandas_profiling as pp
+
+from ydata_profiling import ProfileReport
 from PIL import Image
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -101,7 +102,7 @@ def main():
             # Adicionar botão para gerar relatório HTML
             if st.button("Gerar relatório"):
                 # Gerar relatório HTML usando o ydata-profiling
-                profile = pp.ProfileReport(df)
+                profile = ProfileReport(df)
                 html = profile.to_html()
 
                 # Exibir relatório HTML na página do Streamlit
